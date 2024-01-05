@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>869.6,4056</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>784.8,3955.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>WrittingDataFromDB_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -109,7 +109,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WrittingDataFromDB" sap:VirtualizedContainerService.HintSize="649.6,3991.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WrittingDataFromDB" sap:VirtualizedContainerService.HintSize="649.6,3890.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_connection" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Endorsement" />
@@ -123,8 +123,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="587.2,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="System.Data.OleDb" ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\RPA_Capstone\Database\Database1.accdb" DatabaseConnection="[db_connection]" />
-    <TryCatch DisplayName="Try creating table in db if don't exit" sap:VirtualizedContainerService.HintSize="587.2,288" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="587.2,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_2" ProviderName="System.Data.OleDb" ConnectionString="[&quot;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=&quot;+DBPath]" DatabaseConnection="[db_connection]" />
+    <TryCatch DisplayName="Try creating table in db if don't exit" sap:VirtualizedContainerService.HintSize="587.2,187.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -132,17 +132,17 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Create Endorsement table" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_6" Sql="SELECT *&#xD;&#xA;INTO Endorsement&#xD;&#xA;FROM ExpiryReport&#xD;&#xA;WHERE 1=0;&#xD;&#xA;">
+        <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Create Endorsement table" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_6" Sql="SELECT *&#xA;INTO Endorsement&#xA;FROM ExpiryReport&#xA;WHERE 1=0;&#xA;">
           <ui:ExecuteNonQuery.Parameters>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:ExecuteNonQuery.Parameters>
         </ui:ExecuteNonQuery>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,123.2" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -279,7 +279,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
-            <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim importedRow As DataRow = dt_endorsement.NewRow()&#xD;&#xA;importedRow.ItemArray = last_row.ItemArray &#xD;&#xA;dt_endorsement.Rows.Add(importedRow)" DisplayName="Combine all last rows into dt_endorsement" sap:VirtualizedContainerService.HintSize="510.4,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim importedRow As DataRow = dt_endorsement.NewRow()&#xA;importedRow.ItemArray = last_row.ItemArray &#xA;dt_endorsement.Rows.Add(importedRow)" DisplayName="Combine all last rows into dt_endorsement" sap:VirtualizedContainerService.HintSize="510.4,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
               <ui:InvokeCode.Arguments>
                 <InArgument x:TypeArguments="sd:DataRow" x:Key="last_row">[row_LastUniqueFiltered]</InArgument>
                 <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_endorsement">[dt_Endorsement]</InOutArgument>
