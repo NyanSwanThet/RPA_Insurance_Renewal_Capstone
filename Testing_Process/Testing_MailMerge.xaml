@@ -1,0 +1,242 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="MailMergeTesting" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="688,3527.2" sap2010:WorkflowViewState.IdRef="MailMergeTesting_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Exceptions</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="MailMergeTesting" sap:VirtualizedContainerService.HintSize="595.2,3462.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Renewal_Notification_Letter_.docx  -  Compatibility Mode - Word (Product Activation" sap:VirtualizedContainerService.HintSize="532.8,3350.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="499.2,3059.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,388.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch.Try>
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Timeout="15" Version="V3">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable CvElementArea="518, 558, 89, 31" CvTextArea="545, 566, 33, 12" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="519, 559, 88, 30" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;wnd aaname='Microsoft Office Activation Wizard' cls='NetUIHWND' /&gt;&lt;ctrl idx='2' name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Microsoft Office Activation Wizard' cls='NetUIHWND' /&gt;&lt;ctrl automationid='' name='Close' role='push button' check:text='Close' /&gt;" Guid="b277945c-e198-4884-9fda-01a6474ee87a" InformativeScreenshot="fa871ae1e79a2985121a3c6e56a58dea.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='NUIDialog' title='Microsoft Office Activation Wizard' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CvTextArea="519, 60, 71, 25" CvTextArgument="Office" CvType="Text" DesignTimeRectangle="468, 49, 139, 48" ElementType="Icon" FriendlyName="'graphic'" FullSelectorArgument="&lt;wnd aaname='Microsoft Office Activation Wizard' cls='NetUIHWND' /&gt;&lt;ctrl role='graphic' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Microsoft Office Activation Wizard' cls='NetUIHWND' /&gt;&lt;ctrl role='graphic' automationid='' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Didn't find activvation warning&quot;]" />
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+              <TryCatch.Finally>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Found activation message&quot;]" />
+              </TryCatch.Finally>
+            </TryCatch>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Mailings'" sap:VirtualizedContainerService.HintSize="436.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="569, 61, 66, 21" CvTextArgument="Mailings" CvType="Text" DesignTimeRectangle="558, 54, 90, 34" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Mailings'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabMailings' cls='NetUIRibbonTab' name='Mailings' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIPanViewer' name='Ribbon Tabs' /&gt;&lt;uia automationid='TabMailings' cls='NetUIRibbonTab' name='Mailings' role='Tab Item' check:fulltext='Mailings' /&gt;" Guid="1dd147cb-5a1e-446f-ad6b-9427668f01ab" InformativeScreenshot="96de7001d7203cd517c180a8920aa856.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Renewal_Notification_Letter_.docx  -  Compatibility Mode - Word *' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Start Mail Merge'" sap:VirtualizedContainerService.HintSize="436.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="148, 161, 48, 15" CvTextArgument="Painter" CvType="Text" DesignTimeRectangle="163, 93, 69, 92" DesignTimeScaleFactor="1.25" FriendlyName="'Start Mail Merge'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Mailings' /&gt;&lt;uia cls='NetUIChunk' name='Start Mail Merge' /&gt;&lt;uia automationid='MailMergeStartMailMergeMenu' cls='NetUIAnchor' name='Start Mail Merge' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Mailings' /&gt;&lt;uia cls='NetUIChunk' name='Start Mail Merge' /&gt;&lt;uia automationid='MailMergeStartMailMergeMenu' cls='NetUIAnchor' name='Start Mail Merge' role='Menu Item' check:fulltext='Start Mail Merge' /&gt;" Guid="eb7c0f27-b6ab-406f-bb2b-105724cb0b30" InformativeScreenshot="74c6f232b81fbc6ee90b3bdf0f1f0dba.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Renewal_Notification_Letter_.docx  -  Compatibility Mode - Word *' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Normal Word Document'" sap:VirtualizedContainerService.HintSize="436.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="45, 193, 166, 15" CvTextArgument="Normal Word Document" CvType="Text" DesignTimeRectangle="2, 185, 302, 36" DesignTimeScaleFactor="1.25" FriendlyName="'Normal Word Document'" FullSelectorArgument="&lt;wnd cls='NetUIHWND' /&gt;&lt;ctrl name='Normal Word Document' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='NetUIHWND' /&gt;&lt;ctrl name='Normal Word Document' role='menu item' automationid='' check:text='Normal Word Document' /&gt;" Guid="c092e36d-4a86-4163-9f74-ac38ab32c1fa" InformativeScreenshot="495f8db17285f34ab836d6a33a20f0c3.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Renewal_Notification_Letter_.docx  -  Compatibility Mode - Word *' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Select Recipients'" sap:VirtualizedContainerService.HintSize="436.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="232, 93, 87, 92" DesignTimeScaleFactor="1.25" FriendlyName="'Select Recipients'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Mailings' /&gt;&lt;uia cls='NetUIChunk' name='Start Mail Merge' /&gt;&lt;uia automationid='MailMergeSelectRecipients' cls='NetUIAnchor' name='Select Recipients' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Mailings' /&gt;&lt;uia cls='NetUIChunk' name='Start Mail Merge' /&gt;&lt;uia automationid='MailMergeSelectRecipients' cls='NetUIAnchor' name='Select Recipients' role='Menu Item' check:fulltext='Select Recipients' /&gt;" Guid="a422762a-38b0-4200-b6ac-30ff5031a69b" InformativeScreenshot="d1f34cd9e376a01b85ee2054e0d110d2.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Renewal_Notification_Letter_.docx  -  Compatibility Mode - Word *' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Use an Existing List...'" sap:VirtualizedContainerService.HintSize="436.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="45, 47, 135, 16" CvTextArgument="Use an Existing List..." CvType="Text" DesignTimeRectangle="2, 38, 286, 36" DesignTimeScaleFactor="1.25" FriendlyName="'Use an Existing List...'" FullSelectorArgument="&lt;wnd cls='NetUIHWND' /&gt;&lt;ctrl name='Use an Existing List...' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='NetUIHWND' /&gt;&lt;ctrl name='Use an Existing List...' role='menu item' automationid='' check:text='Use an Existing List...' /&gt;" Guid="5dc3cfe7-97cc-4883-b43d-57a19a67413c" InformativeScreenshot="2390818c3b4ddf94eaeff37b11adaf84.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Renewal_Notification_Letter_.docx  -  Compatibility Mode - Word *' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Database1.accdb'" sap:VirtualizedContainerService.HintSize="436.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="254, 273, 117, 16" CvTextArgument="Database1.accdb" CvType="Text" DesignTimeRectangle="255, 268, 294, 28" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Database1.accdb'" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;&lt;ctrl name='Items View' role='list' /&gt;&lt;ctrl automationid='2' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd ctrlid='1121' title='ShellView' /&gt;&lt;wnd aaname='Items View' cls='DirectUIHWND' /&gt;&lt;ctrl name='Items View' role='list' /&gt;&lt;ctrl automationid='2' /&gt;&lt;ctrl automationid='System.ItemNameDisplay' role='editable text' check:text='Database1.accdb' /&gt;" Guid="ed509037-3a4e-4f93-882e-9eaf2b0c8232" InformativeScreenshot="6a677068f956716bc520838da084eb22.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='#32770' title='Select Data Source' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="436.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="695, 585, 110, 34" CvTextArea="730, 593, 40, 17" CvTextArgument="Open" CvType="Button" DesignTimeRectangle="696, 586, 110, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" Guid="62962d18-c823-4c0a-b436-2e899f8be15f" InformativeScreenshot="c3a482d443efc0be2f198b2a96d6677c.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='#32770' title='Select Data Source' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Endorsement'" sap:VirtualizedContainerService.HintSize="436.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="44, 117, 546, 15" CvTextArgument="Endorsement 12/15/2023 10:38:39 AM 12/15/2023 10:38:39 AM TABLE" CvType="Text" DesignTimeRectangle="20, 115, 765, 21" DesignTimeScaleFactor="1.25" ElementType="ListItem" FriendlyName="'Endorsement'" FullSelectorArgument="&lt;wnd aaname='Horizontal' cls='SysListView32' /&gt;&lt;ctrl name='Endorsement' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Horizontal' cls='SysListView32' /&gt;&lt;ctrl name='Endorsement' role='list item' automationid='' check:text='Endorsement' /&gt;" Guid="31317b66-ee22-4e9e-af7f-a38ab4d349f6" InformativeScreenshot="92e58506cead344f0253a020df0a6e2d.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='bosa_sdm_msword' title='Select Table' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="47, 117, 77, 15" CvTextArgument="Endorsement" CvType="Text" DesignTimeRectangle="44, 117, 80, 15" ElementType="Text" FriendlyName="'Endorsement'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="BottomLeft" X="42" Y="-7" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="436.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="373, 254, 114, 32" CvTextArea="420, 263, 20, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="374, 255, 114, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='OK' role='push button' automationid='' check:text='OK' /&gt;" Guid="ef831001-786c-4649-92b9-470ef89cb2fe" InformativeScreenshot="73ca1f2d612b1de098f93b6d6ef37bf9.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='bosa_sdm_msword' title='Select Table' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Finish &amp; Merge'" sap:VirtualizedContainerService.HintSize="436.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="1145, 93, 62, 92" DesignTimeScaleFactor="1.25" FriendlyName="'Finish &amp; Merge'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Mailings' /&gt;&lt;uia cls='NetUIChunk' name='Finish' /&gt;&lt;uia automationid='MailMergeFinishAndMergeMenu' cls='NetUIAnchor' name='Finish &amp;amp; Merge' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Mailings' /&gt;&lt;uia cls='NetUIChunk' name='Finish' /&gt;&lt;uia automationid='MailMergeFinishAndMergeMenu' cls='NetUIAnchor' name='Finish &amp;amp; Merge' role='Menu Item' check:fulltext='Finish &amp;amp; Merge' /&gt;" Guid="2a66e897-6e1a-490a-b019-a90c64159d0c" InformativeScreenshot="0e2d4bdabeca9b4f94847672dd11b77b.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Renewal_Notification_Letter_.docx  -  Compatibility Mode - Word *' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="1153, 96, 39, 43" CvType="Icon" DesignTimeRectangle="1151, 94, 43, 47" ElementType="Icon" FriendlyName="'winword.exe Renewal_Not…'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAvCAYAAAB6zDPWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG4SURBVGhD7de/SwJhHMfx/pLW1sZyDcfKsT8gz6UhxxAhCKfISIJsCUKIIIr2cOgHbv3CIQhSCG5qUhdz+ebnokPzSZ/nnu/znNINbzz17nlennqPTrWaDZqUIqypIqyplLCl0jHl8ztaYQzR2DIpYZPJVUosL3q3QcvltoRjy6SMxdkRPWej/4N1HPFbPSrHSdLtzXXf2DJpYWOxOcpmM1Qo7EmH/XFcPL6gDNbGlstl6nQ60mH/nxepCg4Ni21VcKhYpAIOHYtkwWOBRTLgscGiUeCxwqJh4NCwo8LC0Ts3so51Xdc7Zlg4u5ird25kHSsTVroIG2FNYSuVO2q328JJg2YEm8ls+NucYCNYVH3/8Le5wMaw8aMqrZy8+Pc5wGzYw+JB32Onjy7N7D6wglmwf/3n5wazYIfFCTaORVxgK1jEAbaGRbpgJSwuR7rN7j/R9PZ9ILASdu3yVbv54rOH3byqfY/banYhnwMwUVY/BgAGhSJrWF0osoLlgCLj2N/Qeu2N0ul1SqUc5RKJJXPYgTPa7eL8zPvREzTR0q6NFUFNpY3FddQGFLF+wUwXYU01QdgGfQFzGqArqDMwvgAAAABJRU5ErkJggg==" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="BottomRight" X="-19" Y="-17" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0.5" DelayBefore="0.5" DisplayName="Click 'Edit Individual'" sap:VirtualizedContainerService.HintSize="436.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="46, 11, 183, 15" CvTextArgument="Edit Individual Documents..." CvType="Text" DesignTimeRectangle="2, 2, 257, 36" DesignTimeScaleFactor="1.25" FriendlyName="'Edit Individual'" FullSelectorArgument="&lt;wnd cls='NetUIHWND' /&gt;&lt;ctrl name='Edit Individual Documents...' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='NetUIHWND' /&gt;&lt;ctrl name='Edit Individual Documents...' role='menu item' automationid='' check:text='Edit Individual Documents...' /&gt;" Guid="4254b13c-8064-4883-b349-d243181be243" InformativeScreenshot="70207d798a1f18b513b6f84d3041475b.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='renewal_notification_letter_.docx  -  Compatibility Mode - Word *' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArea="46, 11, 183, 15" CvTextArgument="Edit Individual Documents..." CvType="Text" DesignTimeRectangle="46, 11, 183, 15" ElementType="Text" FriendlyName="'Edit Individual'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="436.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="efce96c7-5da6-4a5a-8127-b5150e5351b7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvElementArea="89, 168, 114, 32" CvTextArea="136, 178, 20, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="90, 169, 114, 31" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='OK' role='push button' automationid='' check:text='OK' /&gt;" Guid="d736d333-5fa5-4c91-9ef9-9f7ea77e20a9" InformativeScreenshot="45c27e6bb632749e3af1c2ac17a7fe9f.png" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='bosa_sdm_msword' title='Merge to New Document' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436.8,144" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Done Mail Merging&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" Arguments=".templates\Renewal_Notification_Letter_.docx" FilePath="C:\Program Files\Microsoft Office\root\Office16\winword.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATCSURBVFhH7ZhtUFRlFMehaaYy3F1hXV7UACk1nZrJHCHyJacZULR4MdAyAjQNKhvTcewFmCyzSVCwaWqsSWukhsrlxQoBBZZlidDNEl8qx0aRtCLQGis/+OF0znn2Prss1+UuXPeD05n5DXcvc/f/4znnee4MQddT3RBgNFfwvIq+2nkfX4CAUtFf48ofsm5W/YIAgNk3CgXfZVR7OBBgdohQ8F0mtYcDAWaHCgXf9b/g1cBsrYL9+MBQqIeMBMzWJjhnZw9cnV+YubvOwwO7e+l4UA0bDpgdGnR7QXs1AnH5DmbiU0QbTFzVBrHEyjaIedIuWGGHaKYVbluO5LXChFwbMz7HBpOe70TRcyjapxroLywYV+AlhihisStdYsggsTy32PicFhj3BJLdAnc8ewCmvuCEaYVdyNERIQQ95Nxi7lUbIIZM8Fq1cS65qOxmiHq8GVe+Du5c3wHTXj6iGuoPLCjFvNrpLebdTveqoRgSiXKRy5ohdkUtTFnngKkvfa8a6g8s6NnO8r3dUFbbDfdv6JRyies7YVvNGSa5yCnF4td2wNaq01CKkFjksiaIeKwJYvKqYMpaOwp+pxrqD0LQY856+i4DVRnKiHba4JVPTvE9qvcbenjOaMWKK07yvbO9l1mMCH/0gEuwVT9Bz3Z+7viNQzt+uCjbWf/tH3yP6lj3JZ4zauen9l/5XmXreYhAsfClxH6IybXqK+g5Z8pq/fXPFTlndO1Zk1fZuZ3Hzlziz0Uf/cRi4Uv2g2VJI0TrLSg3ALYzudjJoVQJOGNJhYf4+usTF6VQxmuHccWa+JrqwQ3foFwjWLKQzAaIztFZcOB5ZpMrtry8C9bsOMHX7+07y1CV7PkZ0l8Vf8iff1+RYpbMerA8Uo+Ce3QWdMkp51m9U8xcqfW0nLPcrUfguXeP83X78QvcVqq6g78LORQbu3gfY07ZBZbFVohY2ig3z3BhQc+3AO/O3WJ3tmNbaYdSzVjtYJSqtJ3jn1s+OwVjFbmMOsacslNfQUWMdyeeZxmbDnO4UiQpNkEjXv/ruisqrbgTpYScOf0rMKchegsqxwbJKb/wrLqDvWLOshqgskWsnFJCDCGx1C/B/PAXELZAZ0HPt4ByntGcKVX44Y9yzla/3eW6C+A42u8WS0UxkntoLwp+oK8gf8Bjg94CynmWvvEQlOB8Efc+3SrnbHq+DbZUnmSyNztZTooRi2r1F5RirjnzPjbEBvCaM6WdihyKhS5EUmogbL7egspbwDVnA44NKeY1Zx5iYSS2sAblqiF0QbX+gvR6kqtGYlIOjw0S41XzmjO5am6xMfOrYEyyFcKS3kHBKh0FMxuqqZ1uscHtZLEB7SQxRIohSVYwzHoLRk9fB8bEN8A0ZxuY5m4fESyooUy3xKWCb9Jg1KQsuPWufDDMLATjrDcxoGxQoL9gtjbBkLsLwDfPQMg9a2D0jBfBeN8mMM0uxYDyQYH+gtnaBA0zi3BlfBBfDIaEjdjazWCcXYLtHfnqEZitTZBCh4JXjedOHzkCs7UJinZpQT1ouGC2VkH1L7jWYPb1ITgKh79Z7QuuJcbE11sw2yAUfNdNyGQkIYDEI5RJ2UNWMEL/io1AogIEZWFmUPB/G0TZjj5N0YUAAAAASUVORK5CYII=" InformativeScreenshot="c2b41f9d035709ca451417e4677feb11.png" Selector="&lt;wnd app='winword.exe' cls='OpusApp' title='Renewal_Notification_Letter_.docx  -  Compatibility Mode - Word *' /&gt;" Title="Renewal_Notification_Letter_.docx  -  Compatibility Mode - Word (Product Activation Failed)" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,294 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ExcelToDb" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="869.6,3217.6" sap2010:WorkflowViewState.IdRef="ExcelToDb_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ExcelToDb" sap:VirtualizedContainerService.HintSize="499.20000000000005,3476.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_ExpiryReport" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_BusinessPolicy" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_ClaimReport" />
+      <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_connection" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_ExpiryReport]" DisplayName="Read Expiry Report sheet" sap:VirtualizedContainerService.HintSize="436.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="ExpiryReport" WorkbookPath="[DataDirectory+&quot;Expiry_Report.xlsx&quot;]" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_ClaimReport]" DisplayName="Read Claim Report sheet" sap:VirtualizedContainerService.HintSize="436.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="ClaimReport" WorkbookPath="[DataDirectory+&quot;ClaimReport.xlsx&quot;]" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_BusinessPolicy]" DisplayName="Read Business Policy" sap:VirtualizedContainerService.HintSize="436.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="BusinessRule" WorkbookPath="[DataDirectory+&quot;BusinessRule.xlsx&quot;]" />
+    <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="436.8,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.OleDb" ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\RPA_Capstone\Database\Database1.accdb" DatabaseConnection="[db_connection]" />
+    <TryCatch DisplayName="Try Catch-Create Expiry Report" sap:VirtualizedContainerService.HintSize="436.8,377.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Create Expiry report table" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_6" Sql="CREATE TABLE ExpiryReport (&#xA;    [No] INT,&#xA;&#x9;[Policy No] VARCHAR(50),&#xA;&#x9;[Registeration No] VARCHAR(50),&#xA;&#x9;[Policy Status] VARCHAR(50),&#xA;&#x9;[Policy Type] VARCHAR(50),&#xA;&#x9;[Customer Name] VARCHAR(50),&#xA;&#x9;[Contact No] VARCHAR(50),&#xA;&#x9;[Street] VARCHAR(50),&#xA;&#x9;[Township] VARCHAR(50),&#xA;&#x9;[Make] VARCHAR(50),&#xA;&#x9;[Model] INT,&#xA;&#x9;[Insurance Start Date] DATE,&#xA;&#x9;[Insurance End Date] DATE,&#xA;&#x9;[Basic Premium] INT,&#xA;&#x9;[Additional Cover] INT,&#xA;&#x9;[Annual Premium] INT,&#xA;&#x9;[Total Premium] INT,&#xA;&#x9;[Sum Insurance] INT,&#xA;&#x9;[Penalty] INT,&#xA;&#x9;[NCB] INT,&#xA;&#x9;[Is Terminated] VARCHAR(10),&#xA;&#x9;[Email] VARCHAR(50)&#x9;&#xA;);&#xA;">
+          <ui:ExecuteNonQuery.Parameters>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:ExecuteNonQuery.Parameters>
+        </ui:ExecuteNonQuery>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,212.8" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Expiry Report table already exist&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ExpiryReport]" DisplayName="For Each Row in dt_ExpiryReprot" sap:VirtualizedContainerService.HintSize="436.8,367.2" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentExpiryRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376.8,179.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Inserting each row to expiry report db" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_3" Sql="INSERT INTO ExpiryReport&#xD;&#xA;VALUES (@No, @Policy_No, @Registeration_No, @Policy_Status, @Policy_Type, &#xD;&#xA;@Customer_Name, @Contact_No, @Street, @Township, @Make, &#xD;&#xA;@Model, @Insurance_Start_Date, @Insurance_End_Date, @Basic_Premium, @Additional_Cover, &#xD;&#xA;@Annual_Premium, @Total_Premium, @Sum_Insurance, @Penalty, @NCB, &#xD;&#xA;@Is_Terminated, @Email);&#xD;&#xA;">
+              <ui:ExecuteNonQuery.Parameters>
+                <InArgument x:TypeArguments="x:Int32" x:Key="No">[CInt(CurrentExpiryRow("No"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Policy_No">[CurrentExpiryRow("Policy No").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Registeration_No">[CurrentExpiryRow("Registeration No").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Policy_Status">[CurrentExpiryRow("Policy Status").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Policy_Type">[CurrentExpiryRow("Policy Type").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Customer_Name">[CurrentExpiryRow("Customer Name").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Contact_No">[CurrentExpiryRow("Contact No").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Street">[CurrentExpiryRow("Street").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Township">[CurrentExpiryRow("Township").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Make">[CurrentExpiryRow("Make").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Model">[CInt(CurrentExpiryRow("Model"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Insurance_Start_Date">[CurrentExpiryRow("Insurance Start Date").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Insurance_End_Date">[CurrentExpiryRow("Insurance End Date").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Basic_Premium">[CInt(CurrentExpiryRow("Basic Premium"))]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Additional_Cover">[CInt(CurrentExpiryRow("Additional Cover"))]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Annual_Premium">[CInt(CurrentExpiryRow("Annual Premium"))]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Total_Premium">[CInt(CurrentExpiryRow("Total Premium"))]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Sum_Insurance">[CInt(CurrentExpiryRow("Sum Insurance"))]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Penalty">[CInt(CurrentExpiryRow("Penalty"))]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="NCB">[CInt(CurrentExpiryRow("NCB"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Is_Terminated">[CurrentExpiryRow("Is Terminated").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Email">[CurrentExpiryRow("Email").ToString]</InArgument>
+              </ui:ExecuteNonQuery.Parameters>
+            </ui:ExecuteNonQuery>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+    <ui:LogMessage DisplayName="Log for expiry db" sap:VirtualizedContainerService.HintSize="436.8,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Expiry Report Db created&quot;]" />
+    <TryCatch DisplayName="Try Catch-Create Claim Report" sap:VirtualizedContainerService.HintSize="436.8,320.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+      <TryCatch.Try>
+        <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Create Claim Report table" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_7" Sql="CREATE TABLE ClaimReport (&#xA;[No] INT,&#xA;  [Policy No] VARCHAR(50),&#xA;  [Registeration No] VARCHAR(50),&#xA;  [Amount] INT,&#xA;  [Reason] VARCHAR(100),&#xA;  [Request Date] DATE,&#xA;  [Paid Date] DATE);&#xA;">
+          <ui:ExecuteNonQuery.Parameters>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:ExecuteNonQuery.Parameters>
+        </ui:ExecuteNonQuery>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Claim Report table already exist&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_ClaimReport]" DisplayName="For Each Row in dt_ClaimReport" sap:VirtualizedContainerService.HintSize="436.8,367.2" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentClaimRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376.8,179.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Create claim report table" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_4" Sql="INSERT INTO ClaimReport&#xA;VALUES (@No, @PolicyNo, @RegisterationNo, &#xA;@Amount, @Reason, @RequestDate, @PaidDate);&#xA;">
+              <ui:ExecuteNonQuery.Parameters>
+                <InArgument x:TypeArguments="x:Int32" x:Key="No">[CInt(CurrentClaimRow("No"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="PolicyNo">[CurrentClaimRow("Policy No").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="RegisterationNo">[CurrentClaimRow("Registeration No").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Amount">[CInt(CurrentClaimRow("Amount"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Reason">[CurrentClaimRow("Reason").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="RequestDate">[CurrentClaimRow("Request Date").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="PaidDate">[CurrentClaimRow("Paid Date").ToString]</InArgument>
+              </ui:ExecuteNonQuery.Parameters>
+            </ui:ExecuteNonQuery>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+    <ui:LogMessage DisplayName="Log for claim db" sap:VirtualizedContainerService.HintSize="436.8,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Claim Report Db created&quot;]" />
+    <TryCatch DisplayName="Try Catch-Create Business Policy Rule" sap:VirtualizedContainerService.HintSize="436.8,320.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+      <TryCatch.Try>
+        <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Create businesspolicy table" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_8" Sql="CREATE TABLE BusinessRule(&#xA;&#x9;[No] INT,&#xA;&#x9;[Make] VARCHAR(50),&#xA;&#x9;[Model] INT,&#xA;&#x9;[Impact] VARCHAR(50),&#xA;&#x9;[Sum Insurance (%)] INT);&#xA;">
+          <ui:ExecuteNonQuery.Parameters>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:ExecuteNonQuery.Parameters>
+        </ui:ExecuteNonQuery>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Business Policy already exist&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_BusinessPolicy]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="436.8,367.2" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentBusinessPolicyRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376.8,179.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Run command" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" Sql="INSERT INTO BusinessRule&#xA;VALUES (@No, @Make, @Model, &#xA;@Impact, @SumInsurance);&#xA;">
+              <ui:ExecuteNonQuery.Parameters>
+                <InArgument x:TypeArguments="x:Int32" x:Key="No">[CInt(CurrentBusinessPolicyRow("No"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Make">[CurrentBusinessPolicyRow("Make").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Model">[CInt(CurrentBusinessPolicyRow("Model"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Impact">[CurrentBusinessPolicyRow("Impact").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="SumInsurance">[CInt(CurrentBusinessPolicyRow("Sum Insurance (%)"))]</InArgument>
+              </ui:ExecuteNonQuery.Parameters>
+            </ui:ExecuteNonQuery>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+    <ui:DatabaseDisconnect DatabaseConnection="[db_connection]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="436.8,24.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+    <ui:ReportStatus DisplayName="Report excel to db" sap:VirtualizedContainerService.HintSize="436.8,90.4" sap2010:WorkflowViewState.IdRef="ReportStatus_1" StatusText="[&quot;Transfered data from Excel to Database&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ReportStatus>
+  </Sequence>
+</Activity>

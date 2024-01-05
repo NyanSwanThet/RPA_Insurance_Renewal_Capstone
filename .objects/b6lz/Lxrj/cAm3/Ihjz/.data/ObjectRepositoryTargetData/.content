@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="lAFVCkQyjkqMqnH3NnOIMQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CvElementArea="518, 558, 89, 31" CvTextArea="545, 566, 33, 12" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="519, 559, 88, 30" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;wnd aaname='Microsoft Office Activation Wizard' cls='NetUIHWND' /&gt;&lt;ctrl idx='2' name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Microsoft Office Activation Wizard' cls='NetUIHWND' /&gt;&lt;ctrl automationid='' name='Close' role='push button' check:text='Close' /&gt;" Guid="6c698530-9ded-4637-a4d2-9017d616af60" ScopeSelectorArgument="&lt;wnd app='winword.exe' cls='NUIDialog' title='Microsoft Office Activation Wizard' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ef5ca44d9c1d005622d9ec9f4e955e7c.png" xmlns="">0Qx5MxkM6ekukIC6GgbR_vA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
