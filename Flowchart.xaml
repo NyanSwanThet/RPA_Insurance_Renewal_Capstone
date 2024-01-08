@@ -212,7 +212,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:InvokeWorkflowFile>
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID18">
+                        <FlowStep x:Name="__ReferenceID17">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">221,1394</av:Point>
@@ -301,7 +301,7 @@
                                 </FlowStep>
                               </FlowDecision.True>
                               <FlowDecision.False>
-                                <FlowStep x:Name="__ReferenceID17">
+                                <FlowStep x:Name="__ReferenceID16">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">631,1684</av:Point>
@@ -376,7 +376,7 @@
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">221,571</av:Point>
                   <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">321,623.8 321,674</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">321,623.8 321,653.8 320,653.8 320,663.6</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:ReportStatus DisplayName="Report All exist" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ReportStatus_2" StatusText="[&quot;All Input exists&quot;]">
@@ -387,18 +387,22 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ReportStatus>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID14">
+                <FlowStep x:Name="__ReferenceID18">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">221,674</av:Point>
+                      <av:Point x:Key="ShapeLocation">220,663.6</av:Point>
                       <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">321,726.8 321,777</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">320,716.4 320,746.4 321,746.4 321,777</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="FolderCreation.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="FolderCreation.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="FolderCreationNoNeedDBDeletion.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="FolderCreationNoNeedDBDeletion.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <OutArgument x:TypeArguments="x:String" x:Key="out_ExcelOutputPath">[ExcelOutputPath]</OutArgument>
-                      <OutArgument x:TypeArguments="x:String" x:Key="out_PDFOutputPath">[PDFOutputPath]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="out_ExcelOutputPath">
+                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="ExcelOutputPath" />
+                      </OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="out_PDFOutputPath">
+                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="PDFOutputPath" />
+                      </OutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -445,7 +449,7 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:ReportStatus DisplayName="Report Missing" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ReportStatus_1" StatusText="[&quot;Some Input Files are Missing. System Terminated&quot;]" />
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID16">
+                <FlowStep x:Name="__ReferenceID15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">530,673.6</av:Point>
@@ -487,7 +491,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID15">
+        <FlowStep x:Name="__ReferenceID14">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">372,228</av:Point>
@@ -513,8 +517,8 @@
     <x:Reference>__ReferenceID14</x:Reference>
     <x:Reference>__ReferenceID15</x:Reference>
     <x:Reference>__ReferenceID16</x:Reference>
-    <x:Reference>__ReferenceID17</x:Reference>
     <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID17</x:Reference>
     <x:Reference>__ReferenceID18</x:Reference>
   </Flowchart>
 </Activity>
