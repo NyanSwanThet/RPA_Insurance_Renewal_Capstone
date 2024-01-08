@@ -17,7 +17,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>784.8,2186.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>535.2,1996</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Applying_Business_Plan_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -117,7 +117,7 @@
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="policy applying sequence" sap:VirtualizedContainerService.HintSize="545.6,2121.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence DisplayName="policy applying sequence" sap:VirtualizedContainerService.HintSize="545.6,1931.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_AfterBR" />
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_connection" />
@@ -248,7 +248,7 @@
                 <OutArgument x:TypeArguments="x:String">[EndorsementRegisterNum]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[CurrentEndorsmentRow("Registeration No").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">[CurrentEndorsmentRow("Registration No").ToString]</InArgument>
               </Assign.Value>
             </Assign>
             <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_ClaimReport]" DisplayName="FOR each claim_row in dt_ClaimReport" sap:VirtualizedContainerService.HintSize="478.4,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
@@ -502,7 +502,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <TryCatch DisplayName="Try Catch-Adding ClaimCount to AfterBusinessRules" sap:VirtualizedContainerService.HintSize="483.2,377.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch DisplayName="Try Catch-Adding ClaimCount to AfterBusinessRules" sap:VirtualizedContainerService.HintSize="483.2,187.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -517,10 +517,10 @@
         </ui:ExecuteNonQuery>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,212.8" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -547,30 +547,78 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Inserting each row to afterbusinessrule db" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_8" Sql="INSERT INTO AfterBusinessRule&#xA;VALUES (@No, @Policy_No, @Registeration_No, @Policy_Status, @Policy_Type, &#xA;@Customer_Name, @Contact_No, @Street, @Township, @Make, &#xA;@Model, @Insurance_Start_Date, @Insurance_End_Date, @Basic_Premium, @Additional_Cover, &#xA;@Annual_Premium, @Total_Premium, @Sum_Insurance, @Penalty, @NCB, &#xA;@Is_Terminated, @Email, @Version, @ClaimCount);&#xA;">
               <ui:ExecuteNonQuery.Parameters>
-                <InArgument x:TypeArguments="x:Int32" x:Key="No">[CInt(CurrentAfterBRRow("No"))]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Policy_No">[CurrentAfterBRRow("Policy No").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Registeration_No">[CurrentAfterBRRow("Registeration No").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Policy_Status">[CurrentAfterBRRow("Policy Status").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Policy_Type">[CurrentAfterBRRow("Policy Type").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Customer_Name">[CurrentAfterBRRow("Customer Name").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Contact_No">[CurrentAfterBRRow("Contact No").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Street">[CurrentAfterBRRow("Street").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Township">[CurrentAfterBRRow("Township").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Make">[CurrentAfterBRRow("Make").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Model">[CInt(CurrentAfterBRRow("Model"))]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Insurance_Start_Date">[CurrentAfterBRRow("Insurance Start Date").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Insurance_End_Date">[CurrentAfterBRRow("Insurance End Date").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Basic_Premium">[CInt(CurrentAfterBRRow("Basic Premium"))]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Additional_Cover">[CInt(CurrentAfterBRRow("Additional Cover"))]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Annual_Premium">[CInt(CurrentAfterBRRow("Annual Premium"))]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Total_Premium">[CInt(CurrentAfterBRRow("Total Premium"))]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Sum_Insurance">[CInt(CurrentAfterBRRow("Sum Insurance"))]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Penalty">[CInt(CurrentAfterBRRow("Penalty"))]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="NCB">[CInt(CurrentAfterBRRow("NCB"))]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Is_Terminated">[CurrentAfterBRRow("Is Terminated").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Email">[CurrentAfterBRRow("Email").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Version">[CurrentAfterBRRow("Run Time").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="ClaimCount">[CInt(CurrentAfterBRRow("ClaimCount"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Version">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Run Time&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="No">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentAfterBRRow(&quot;No&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Policy_No">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Policy No&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Registeration_No">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Registration No&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Policy_Status">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Policy Status&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Policy_Type">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Policy Type&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Customer_Name">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Customer Name&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Contact_No">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Contact No&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Street">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Street&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Township">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Township&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Make">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Make&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Model">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentAfterBRRow(&quot;Model&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Insurance_Start_Date">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Insurance Start Date&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Insurance_End_Date">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Insurance End Date&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Basic_Premium">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentAfterBRRow(&quot;Basic Premium&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Additional_Cover">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentAfterBRRow(&quot;Additional Cover&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Annual_Premium">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentAfterBRRow(&quot;Annual Premium&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Total_Premium">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentAfterBRRow(&quot;Total Premium&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Sum_Insurance">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentAfterBRRow(&quot;Sum Insurance&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Penalty">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentAfterBRRow(&quot;Penalty&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="NCB">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentAfterBRRow(&quot;NCB&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Is_Terminated">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Is Terminated&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Email">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentAfterBRRow(&quot;Email&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="ClaimCount">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentAfterBRRow(&quot;ClaimCount&quot;))" />
+                </InArgument>
               </ui:ExecuteNonQuery.Parameters>
             </ui:ExecuteNonQuery>
           </Sequence>

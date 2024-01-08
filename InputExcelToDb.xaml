@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ExcelToDb" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="784.8,3351.2" sap2010:WorkflowViewState.IdRef="ExcelToDb_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ExcelToDb" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="784.8,3484.8" sap2010:WorkflowViewState.IdRef="ExcelToDb_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -95,7 +95,7 @@
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExcelToDb" sap:VirtualizedContainerService.HintSize="499.2,3286.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExcelToDb" sap:VirtualizedContainerService.HintSize="499.2,3420" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ExpiryReport" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_BusinessPolicy" />
@@ -111,16 +111,16 @@
     <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_ClaimReport]" DisplayName="Read Claim Report sheet" sap:VirtualizedContainerService.HintSize="436.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="ClaimReport" WorkbookPath="[DataDirectory+&quot;ClaimReport.xlsx&quot;]" />
     <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_BusinessPolicy]" DisplayName="Read Business Policy" sap:VirtualizedContainerService.HintSize="436.8,88" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="BusinessRule" WorkbookPath="[DataDirectory+&quot;BusinessRule.xlsx&quot;]" />
     <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="436.8,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.OleDb" ConnectionString="[&quot;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=&quot;+DBPath]" DatabaseConnection="[db_connection]" />
-    <TryCatch DisplayName="Try Catch-Create Expiry Report" sap:VirtualizedContainerService.HintSize="436.8,187.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch-Create Expiry Report" sap:VirtualizedContainerService.HintSize="436.8,320.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Create Expiry report table" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_6" Sql="CREATE TABLE ExpiryReport (&#xA;    [No] INT,&#xA;&#x9;[Policy No] VARCHAR(50),&#xA;&#x9;[Registeration No] VARCHAR(50),&#xA;&#x9;[Policy Status] VARCHAR(50),&#xA;&#x9;[Policy Type] VARCHAR(50),&#xA;&#x9;[Customer Name] VARCHAR(50),&#xA;&#x9;[Contact No] VARCHAR(50),&#xA;&#x9;[Street] VARCHAR(50),&#xA;&#x9;[Township] VARCHAR(50),&#xA;&#x9;[Make] VARCHAR(50),&#xA;&#x9;[Model] INT,&#xA;&#x9;[Insurance Start Date] DATE,&#xA;&#x9;[Insurance End Date] DATE,&#xA;&#x9;[Basic Premium] INT,&#xA;&#x9;[Additional Cover] INT,&#xA;&#x9;[Annual Premium] INT,&#xA;&#x9;[Total Premium] INT,&#xA;&#x9;[Sum Insurance] INT,&#xA;&#x9;[Penalty] INT,&#xA;&#x9;[NCB] INT,&#xA;&#x9;[Is Terminated] VARCHAR(10),&#xA;&#x9;[Email] VARCHAR(50)&#x9;&#xA;);&#xA;">
+        <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Create Expiry report table" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_6" Sql="CREATE TABLE ExpiryReport (&#xD;&#xA;    [No] INT,&#xD;&#xA;&#x9;[Policy No] VARCHAR(50),&#xD;&#xA;&#x9;[Registration No] VARCHAR(50),&#xD;&#xA;&#x9;[Policy Status] VARCHAR(50),&#xD;&#xA;&#x9;[Policy Type] VARCHAR(50),&#xD;&#xA;&#x9;[Customer Name] VARCHAR(50),&#xD;&#xA;&#x9;[Contact No] VARCHAR(50),&#xD;&#xA;&#x9;[Street] VARCHAR(50),&#xD;&#xA;&#x9;[Township] VARCHAR(50),&#xD;&#xA;&#x9;[Make] VARCHAR(50),&#xD;&#xA;&#x9;[Model] INT,&#xD;&#xA;&#x9;[Insurance Start Date] DATE,&#xD;&#xA;&#x9;[Insurance End Date] DATE,&#xD;&#xA;&#x9;[Basic Premium] INT,&#xD;&#xA;&#x9;[Additional Cover] INT,&#xD;&#xA;&#x9;[Annual Premium] INT,&#xD;&#xA;&#x9;[Total Premium] INT,&#xD;&#xA;&#x9;[Sum Insurance] INT,&#xD;&#xA;&#x9;[Penalty] INT,&#xD;&#xA;&#x9;[NCB] INT,&#xD;&#xA;&#x9;[Is Terminated] VARCHAR(10),&#xD;&#xA;&#x9;[Email] VARCHAR(50)&#x9;&#xD;&#xA;);&#xD;&#xA;">
           <ui:ExecuteNonQuery.Parameters>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:ExecuteNonQuery.Parameters>
         </ui:ExecuteNonQuery>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -152,7 +152,7 @@
               <ui:ExecuteNonQuery.Parameters>
                 <InArgument x:TypeArguments="x:Int32" x:Key="No">[CInt(CurrentExpiryRow("No"))]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Policy_No">[CurrentExpiryRow("Policy No").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Registeration_No">[CurrentExpiryRow("Registeration No").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Registeration_No">[CurrentExpiryRow("Registration No").ToString]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Policy_Status">[CurrentExpiryRow("Policy Status").ToString]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Policy_Type">[CurrentExpiryRow("Policy Type").ToString]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Customer_Name">[CurrentExpiryRow("Customer Name").ToString]</InArgument>

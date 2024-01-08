@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>784.8,3056.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>784.8,3056</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Before_Business_Rule_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -155,7 +155,7 @@
                 <OutArgument x:TypeArguments="x:String">[EndorsementRegisterationNum]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[CurrentEndorsmentRow("Registeration No").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String">[CurrentEndorsmentRow("Registration No").ToString]</InArgument>
               </Assign.Value>
             </Assign>
             <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_ClaimReport]" DisplayName="FOR each claim_row in dt_ClaimReport" sap:VirtualizedContainerService.HintSize="478.4,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
@@ -354,7 +354,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Create BeforeBusinessRule Table" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" Sql="SELECT *&#xA;INTO BeforeBusinessRule&#xA;FROM Endorsement&#xA;WHERE 1=0;&#xA;&#xA;&#xA;&#xA;">
+        <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Create BeforeBusinessRule Table" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_1" Sql="SELECT *&#xD;&#xA;INTO BeforeBusinessRule&#xD;&#xA;FROM Endorsement&#xD;&#xA;WHERE 1=0;&#xD;&#xA;">
           <ui:ExecuteNonQuery.Parameters>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:ExecuteNonQuery.Parameters>
@@ -398,10 +398,10 @@
         </ui:ExecuteNonQuery>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,212.8" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -422,29 +422,6 @@
         <InArgument x:TypeArguments="sd:DataTable">[in_dt_Endorsment]</InArgument>
       </Assign.Value>
     </Assign>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="BeforeBR Excel Process Scope" sap:VirtualizedContainerService.HintSize="555.2,314.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
-      <ueab:ExcelProcessScopeX.Body>
-        <ActivityAction x:TypeArguments="ui:IExcelProcess">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,228" sap2010:WorkflowViewState.IdRef="Sequence_15">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:WriteRange AddHeaders="True" DataTable="[dt_BeforeBR]" DisplayName="Creating Before Business Rule Excel sheet" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="[BeforeBRPath+&quot;\Before_Business_Plan.xlsx&quot;]">
-              <ui:WriteRange.StartingCell>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </ui:WriteRange.StartingCell>
-            </ui:WriteRange>
-          </Sequence>
-        </ActivityAction>
-      </ueab:ExcelProcessScopeX.Body>
-    </ueab:ExcelProcessScopeX>
     <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_BeforeBR]" DisplayName="For Each Row in dt_Before_BR" sap:VirtualizedContainerService.HintSize="555.2,367.2" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
@@ -459,30 +436,78 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Inserting each row to beforebusinessrule db" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_4" Sql="[STR_SQL_INSERT_BUSINESSRULE]">
               <ui:ExecuteNonQuery.Parameters>
-                <InArgument x:TypeArguments="x:Int32" x:Key="No">[CInt(CurrentBeforeBRRow("No"))]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Policy_No">[CurrentBeforeBRRow("Policy No").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Registeration_No">[CurrentBeforeBRRow("Registeration No").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Policy_Status">[CurrentBeforeBRRow("Policy Status").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Policy_Type">[CurrentBeforeBRRow("Policy Type").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Customer_Name">[CurrentBeforeBRRow("Customer Name").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Contact_No">[CurrentBeforeBRRow("Contact No").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Street">[CurrentBeforeBRRow("Street").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Township">[CurrentBeforeBRRow("Township").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Make">[CurrentBeforeBRRow("Make").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Model">[CInt(CurrentBeforeBRRow("Model"))]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Insurance_Start_Date">[CurrentBeforeBRRow("Insurance Start Date").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Insurance_End_Date">[CurrentBeforeBRRow("Insurance End Date").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Basic_Premium">[CInt(CurrentBeforeBRRow("Basic Premium"))]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Additional_Cover">[CInt(CurrentBeforeBRRow("Additional Cover"))]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Annual_Premium">[CInt(CurrentBeforeBRRow("Annual Premium"))]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Total_Premium">[CInt(CurrentBeforeBRRow("Total Premium"))]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Sum_Insurance">[CInt(CurrentBeforeBRRow("Sum Insurance"))]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Penalty">[CInt(CurrentBeforeBRRow("Penalty"))]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="NCB">[CInt(CurrentBeforeBRRow("NCB"))]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Is_Terminated">[CurrentBeforeBRRow("Is Terminated").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Email">[CurrentBeforeBRRow("Email").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Version">[CurrentBeforeBRRow("Run Time").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="ClaimCount">[CInt(CurrentBeforeBRRow("ClaimCount"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Version">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Run Time&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="No">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentBeforeBRRow(&quot;No&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Policy_No">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Policy No&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Registeration_No">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Registration No&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Policy_Status">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Policy Status&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Policy_Type">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Policy Type&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Customer_Name">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Customer Name&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Contact_No">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Contact No&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Street">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Street&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Township">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Township&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Make">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Make&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Model">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentBeforeBRRow(&quot;Model&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Insurance_Start_Date">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Insurance Start Date&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Insurance_End_Date">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Insurance End Date&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Basic_Premium">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentBeforeBRRow(&quot;Basic Premium&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Additional_Cover">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentBeforeBRRow(&quot;Additional Cover&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Annual_Premium">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentBeforeBRRow(&quot;Annual Premium&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Total_Premium">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentBeforeBRRow(&quot;Total Premium&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Sum_Insurance">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentBeforeBRRow(&quot;Sum Insurance&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Penalty">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentBeforeBRRow(&quot;Penalty&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="NCB">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentBeforeBRRow(&quot;NCB&quot;))" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Is_Terminated">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Is Terminated&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Email">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentBeforeBRRow(&quot;Email&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="ClaimCount">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentBeforeBRRow(&quot;ClaimCount&quot;))" />
+                </InArgument>
               </ui:ExecuteNonQuery.Parameters>
             </ui:ExecuteNonQuery>
           </Sequence>
@@ -490,6 +515,29 @@
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
     <ui:DatabaseDisconnect DatabaseConnection="[db_connection]" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="555.2,24.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="BeforeBR Excel Process Scope" sap:VirtualizedContainerService.HintSize="555.2,314.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,228" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:WriteRange AddHeaders="True" DataTable="[dt_BeforeBR]" DisplayName="Creating Before Business Rule Excel sheet" sap:VirtualizedContainerService.HintSize="387.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="[BeforeBRPath+&quot;\Before_Business_Plan.xlsx&quot;]">
+              <ui:WriteRange.StartingCell>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:WriteRange.StartingCell>
+            </ui:WriteRange>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
     <ui:ReportStatus DisplayName="Report Status" sap:VirtualizedContainerService.HintSize="555.2,90.4" sap2010:WorkflowViewState.IdRef="ReportStatus_1" StatusText="[&quot;Before Business Rule table and excel created&quot;]" />
   </Sequence>
 </Activity>
