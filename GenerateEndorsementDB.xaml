@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>784.8,3802.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>784.8,3923.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>WrittingDataFromDB_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -109,7 +109,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WrittingDataFromDB" sap:VirtualizedContainerService.HintSize="649.6,3737.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WrittingDataFromDB" sap:VirtualizedContainerService.HintSize="649.6,3858.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="db_connection" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Endorsement" />
@@ -202,17 +202,11 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim newColumnName As String = &quot;Run Time&quot;&#xD;&#xA;&#xD;&#xA;'add new column to dt_ExpiryReport'&#xD;&#xA;Dim newColumn As New DataColumn(newColumnName, GetType(String))&#xD;&#xA;dt_ExpiryReport.Columns.Add(newColumn)&#xD;&#xA;&#xD;&#xA;'set new column values to str_date'&#xD;&#xA;For Each row As DataRow In dt_ExpiryReport.Rows&#xD;&#xA;    row(newColumnName) = str_Date&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;'move the new column to first index'&#xD;&#xA;If dt_ExpiryReport.Columns.Contains(newColumnName) Then&#xD;&#xA;    dt_ExpiryReport.Columns(newColumnName).SetOrdinal(0)&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;dt_Endorsement = dt_ExpiryReport.Clone()" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="587.2,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim newColumnName As String = &quot;Run Time&quot;&#xA;&#xA;'add new column to dt_ExpiryReport'&#xA;Dim newColumn As New DataColumn(newColumnName, GetType(String))&#xA;dt_ExpiryReport.Columns.Add(newColumn)&#xA;&#xA;'set new column values to str_date'&#xA;For Each row As DataRow In dt_ExpiryReport.Rows&#xA;    row(newColumnName) = str_Date&#xA;Next&#xA;&#xA;'move the new column to first index'&#xA;If dt_ExpiryReport.Columns.Contains(newColumnName) Then&#xA;    dt_ExpiryReport.Columns(newColumnName).SetOrdinal(0)&#xA;End If&#xA;&#xA;dt_Endorsement = dt_ExpiryReport.Clone()" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="587.2,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
       <ui:InvokeCode.Arguments>
-        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_ExpiryReport">
-          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_ExpiryReport" />
-        </InOutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="str_Date">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_Date" />
-        </InArgument>
-        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_Endorsement">
-          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_Endorsement" />
-        </InOutArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_ExpiryReport">[dt_ExpiryReport]</InOutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="str_Date">[str_Date]</InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_Endorsement">[dt_Endorsement]</InOutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
     <Assign DisplayName="Assign Unique value of registration no" sap:VirtualizedContainerService.HintSize="587.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -223,13 +217,13 @@
         <InArgument x:TypeArguments="sd:DataTable">[dt_ExpiryReport.DefaultView.ToTable(true, "Registration No")]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_UniqueValue]" DisplayName="For Each Row in uniqueValue datatble" sap:VirtualizedContainerService.HintSize="587.2,1044" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_UniqueValue]" DisplayName="For Each Row in uniqueValue datatble" sap:VirtualizedContainerService.HintSize="587.2,1164.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="553.6,856" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="553.6,976.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dt_UniqueFiltered" />
             </Sequence.Variables>
@@ -257,6 +251,7 @@
                 </scg:List>
               </ui:FilterDataTable.SelectColumns>
             </ui:FilterDataTable>
+            <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" OutputDataTable="{x:Null}" ColumnName="Insurance End Date" DataTable="[dt_UniqueFiltered]" DisplayName="Sort Data Table with insurance end date" sap:VirtualizedContainerService.HintSize="510.4,80.8" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" SortOrder="Ascending" />
             <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_UniqueFiltered]" DisplayName="Looping through last row" sap:VirtualizedContainerService.HintSize="510.4,359.2" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
@@ -318,77 +313,31 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Inserting each row to endorsement db" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" Sql="INSERT INTO Endorsement&#xD;&#xA;VALUES (@Version, @No, @Policy_No, @Registration_No, @Policy_Status, @Policy_Type, &#xD;&#xA;@Customer_Name, @Contact_No, @Street, @Township, @Make, &#xD;&#xA;@Model, @Insurance_Start_Date, @Insurance_End_Date, @Basic_Premium, @Additional_Cover, &#xD;&#xA;@Annual_Premium, @Total_Premium, @Sum_Insurance, @Penalty, @NCB, @Is_Terminated, @Email);&#xD;&#xA;">
+            <ui:ExecuteNonQuery AffectedRecords="{x:Null}" ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Inserting each row to endorsement db" ExistingDbConnection="[db_connection]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteNonQuery_5" Sql="INSERT INTO Endorsement&#xA;VALUES (@Version, @No, @Policy_No, @Registration_No, @Policy_Status, @Policy_Type, &#xA;@Customer_Name, @Contact_No, @Street, @Township, @Make, &#xA;@Model, @Insurance_Start_Date, @Insurance_End_Date, @Basic_Premium, @Additional_Cover, &#xA;@Annual_Premium, @Total_Premium, @Sum_Insurance, @Penalty, @NCB, @Is_Terminated, @Email);&#xA;">
               <ui:ExecuteNonQuery.Parameters>
-                <InArgument x:TypeArguments="x:String" x:Key="Version">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="DateTime" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="No">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentExpiryReportRow(&quot;No&quot;))" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Policy_No">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Policy No&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Registration_No">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Registration No&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Policy_Status">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Policy Status&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Policy_Type">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Policy Type&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Customer_Name">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Customer Name&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Contact_No">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Contact No&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Street">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Street&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Township">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Township&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Make">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Make&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Model">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentExpiryReportRow(&quot;Model&quot;))" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Insurance_Start_Date">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Insurance Start Date&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Insurance_End_Date">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Insurance End Date&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Basic_Premium">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentExpiryReportRow(&quot;Basic Premium&quot;))" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Additional_Cover">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentExpiryReportRow(&quot;Additional Cover&quot;))" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Annual_Premium">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentExpiryReportRow(&quot;Annual Premium&quot;))" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Total_Premium">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentExpiryReportRow(&quot;Total Premium&quot;))" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Sum_Insurance">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentExpiryReportRow(&quot;Sum Insurance&quot;))" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Penalty">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentExpiryReportRow(&quot;Penalty&quot;))" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="NCB">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="CInt(CurrentExpiryReportRow(&quot;NCB&quot;))" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Is_Terminated">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Is Terminated&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Email">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentExpiryReportRow(&quot;Email&quot;).ToString" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Version">[DateTime]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="No">[CInt(CurrentExpiryReportRow("No"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Policy_No">[CurrentExpiryReportRow("Policy No").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Registration_No">[CurrentExpiryReportRow("Registration No").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Policy_Status">[CurrentExpiryReportRow("Policy Status").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Policy_Type">[CurrentExpiryReportRow("Policy Type").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Customer_Name">[CurrentExpiryReportRow("Customer Name").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Contact_No">[CurrentExpiryReportRow("Contact No").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Street">[CurrentExpiryReportRow("Street").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Township">[CurrentExpiryReportRow("Township").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Make">[CurrentExpiryReportRow("Make").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Model">[CInt(CurrentExpiryReportRow("Model"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Insurance_Start_Date">[CurrentExpiryReportRow("Insurance Start Date").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Insurance_End_Date">[CurrentExpiryReportRow("Insurance End Date").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Basic_Premium">[CInt(CurrentExpiryReportRow("Basic Premium"))]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Additional_Cover">[CInt(CurrentExpiryReportRow("Additional Cover"))]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Annual_Premium">[CInt(CurrentExpiryReportRow("Annual Premium"))]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Total_Premium">[CInt(CurrentExpiryReportRow("Total Premium"))]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Sum_Insurance">[CInt(CurrentExpiryReportRow("Sum Insurance"))]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Penalty">[CInt(CurrentExpiryReportRow("Penalty"))]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="NCB">[CInt(CurrentExpiryReportRow("NCB"))]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Is_Terminated">[CurrentExpiryReportRow("Is Terminated").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Email">[CurrentExpiryReportRow("Email").ToString]</InArgument>
               </ui:ExecuteNonQuery.Parameters>
             </ui:ExecuteNonQuery>
           </Sequence>
